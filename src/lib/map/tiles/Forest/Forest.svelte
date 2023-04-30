@@ -31,7 +31,7 @@
 <style>
 	.ground {
 		position: relative;
-		background-color: rgb(20, 130, 40);
+		background-color: #148228;
 	}
 
 	.tree {

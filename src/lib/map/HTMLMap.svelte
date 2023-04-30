@@ -35,24 +35,24 @@
 		filter: blur(0.2px);
 		grid-template-columns: repeat(60, 1fr);
 		grid-template-rows: repeat(60, 1fr);
-		background-color: rgb(97, 169, 194);
+		background-color: #61a9c2;
 		background-size: 200% 200%;
 	}
 
 	.tile.sand {
-		background-color: rgb(201, 201, 118);
+		background-color: #c9c976;
 	}
 
 	.tile.grass {
-		background-color: rgb(31, 159, 31);
+		background-color: #1f9f1f;
 	}
 
 	.tile.mountain {
-		background-color: rgb(118, 118, 118);
+		background-color: #767676;
 	}
 
 	.tile.swamp {
-		background-color: rgb(83, 103, 80);
+		background-color: #536750;
 	}
 
 	.tile.snow {

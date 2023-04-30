@@ -25,7 +25,7 @@ const mountainThreshold = 0.6;
 const riverThreshold = 0.85;
 const lakeThreshold = 0.75;
 
-function getIndex(x: number, y: number): number {
+export function getIndex(x: number, y: number): number {
 	return y * width + x;
 }
 

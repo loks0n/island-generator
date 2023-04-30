@@ -1,18 +1,32 @@
 <script lang="ts">
+	import CanvasMap from '$lib/map/CanvasMap.svelte';
+	import HtmlMap from '$lib/map/HTMLMap.svelte';
 	import { seed } from '$lib/map/store';
-	import Game from '../lib/Game.svelte';
+
+	let useCanvas = false;
 </script>
 
-<div>
+<header>
 	<h1>Island Generator</h1>
-	<label for="seed">Seed:</label>
-	<input id="seed" name="seed" type="number" bind:value={$seed} />
-</div>
+	<div>
+		<label for="seed">Seed:</label>
+		<input id="seed" name="seed" type="number" bind:value={$seed} />
+	</div>
 
-<Game />
+	<div>
+		<label for="useCanvas">Use Canvas:</label>
+		<input id="useCanvas" name="useCanvas" type="checkbox" bind:checked={useCanvas} />
+	</div>
+</header>
+
+{#if useCanvas}
+	<CanvasMap />
+{:else}
+	<HtmlMap />
+{/if}
 
 <style>
-	div {
+	header {
 		gap: 1em;
 		display: flex;
 		align-items: center;

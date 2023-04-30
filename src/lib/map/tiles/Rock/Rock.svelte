@@ -50,7 +50,7 @@
 
 <style>
 	.rock {
-		background-color: rgb(82, 82, 82);
+		background-color: #525252;
 		position: relative;
 	}
 
