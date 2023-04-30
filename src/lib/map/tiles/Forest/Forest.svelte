@@ -18,7 +18,7 @@
 </script>
 
 <div class="ground">
-	{#each { length: treeCount } as _}
+	{#each Array(treeCount) as _}
 		{@const Tree = treeTypes[Math.floor(random.next() * treeTypes.length)]}
 		{@const randomBottom = -50 + random.next() * 100}
 		{@const randomLeft = -50 + random.next() * 100}

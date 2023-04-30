@@ -20,7 +20,7 @@
 <div class="rock">
 	{#if stone}
 		<!-- randomly rotate and position the stone-->
-		{#each { length: stoneCount } as _}
+		{#each Array(stoneCount) as _}
 			{@const randomBottom = -50 + random.next() * 100}
 			{@const randomLeft = -50 + random.next() * 100}
 			{@const randomRotation = random.next() * 360}
