@@ -41,13 +41,14 @@ function borderInfluence(x: number, y: number): number {
 }
 
 export function generateMap(seed: number): Terrain[] {
+	const random = new Rand(seed.toString());
+
 	const elevationNoise = makeNoise2D(seed);
 	const moistureNoise = makeNoise2D(seed + 1);
 	const mountainNoise = makeNoise2D(seed + 2);
 	const riverNoise = makeNoise2D(seed + 3);
 	const lakeNoise = makeNoise2D(seed + 4);
 
-	const random = new Rand(seed.toString());
 	const map: Terrain[] = Array(width * height).fill(Terrain.WATER);
 
 	for (let y = 0; y < height; y++) {
